@@ -3,36 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>EasyConcert</title>
+    <title>Concert Hunter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../theme.css">
     <link rel="stylesheet" href="style.css">
     <script src="../../config/config.js"></script>
     <script type="module" src="script.js"></script>
 </head>
 
 <body>
-    <h1 class="main-color">EasyConcert</h1>
-    <div class="button-row">
-        <a href="../melonticketForm/melonticket.html" class="button-concert">
-            <img src="../../assets/melonticket_logo.png" alt="melonticket">
-            <div class="booking-site">Melon Ticket</div>
-        </a>
-        <a href="../yes24Form/yes24.html" class="button-concert">
-            <img src="../../assets/yes24_logo.png" alt="Yes24">
-            <div class="booking-site">Yes24</div>
-        </a>
-        <a href="../interparkForm/interpark.html" class="button-concert">
-            <img src="../../assets/interpark_logo.png" alt="Interpark">
-            <div class="booking-site">Interpark</div>
-        </a>
-        <a href="../thaiticketForm/thaiticket.html" class="button-concert">
-            <img src="../../assets/thaiticketmajor_logo.png" alt="ThaiTicketMajor">
-            <div class="booking-site">ThaiTicket</div>
-        </a>
-    </div>
-    <div class="list-booking-container" id="list-booking">
+    <header class="app-header">
+        <img class="app-icon" src="../../assets/icon-32.png" alt="Concert Hunter">
+        <h1 class="main-color">Concert Hunter</h1>
+    </header>
 
-    </div>
+    <section>
+        <div class="section-label">Start a new booking</div>
+        <div class="button-row">
+            <a href="../melonticketForm/melonticket.html" class="button-concert">
+                <span class="icon-badge"><img src="../../assets/melonticket_logo.png" alt="Melon Ticket"></span>
+                <div class="booking-site">Melon</div>
+            </a>
+            <a href="../yes24Form/yes24.html" class="button-concert">
+                <span class="icon-badge"><img src="../../assets/yes24_logo.png" alt="Yes24"></span>
+                <div class="booking-site">Yes24</div>
+            </a>
+            <a href="../interparkForm/interpark.html" class="button-concert">
+                <span class="icon-badge"><img src="../../assets/interpark_logo.png" alt="Interpark"></span>
+                <div class="booking-site">Interpark</div>
+            </a>
+            <a href="../thaiticketForm/thaiticket.html" class="button-concert">
+                <span class="icon-badge"><img src="../../assets/thaiticketmajor_logo.png" alt="ThaiTicketMajor"></span>
+                <div class="booking-site">ThaiTicket</div>
+            </a>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-label">Saved bookings</div>
+        <div class="list-booking-container" id="list-booking">
+
+        </div>
+    </section>
 </body>
 
 </html>

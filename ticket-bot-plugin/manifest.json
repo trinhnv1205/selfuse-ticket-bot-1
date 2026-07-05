@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "EasyConcertKorea",
-    "description": "A simple ticket bot for Interpark, Yes24, and Melon Ticket.",
+    "name": "Concert Hunter",
+    "description": "A ticket bot for Melon Ticket, Yes24, Interpark, and ThaiTicketMajor.",
     "version": "1.0",
     "permissions": [
         "storage",
@@ -140,11 +140,16 @@
     ],
     "action": {
         "default_popup": "popup/mainPage/index.html",
-        "default_icon": "assets/logo_easy_korea_concert.png"
+        "default_icon": {
+            "16": "assets/icon-16.png",
+            "32": "assets/icon-32.png",
+            "48": "assets/icon-48.png",
+            "128": "assets/icon-128.png"
+        }
     },
     "icons": {
-        "16": "assets/logo_easy_korea_concert.png",
-        "48": "assets/logo_easy_korea_concert.png",
-        "128": "assets/logo_easy_korea_concert.png"
+        "16": "assets/icon-16.png",
+        "48": "assets/icon-48.png",
+        "128": "assets/icon-128.png"
     }
 }

@@ -1,0 +1,216 @@
+:root {
+    --popup-width: 460px;
+
+    --bg: #f7f7fb;
+    --surface: #ffffff;
+    --border: #e5e7eb;
+    --border-strong: #d4d4d8;
+
+    --text: #18181b;
+    --text-muted: #71717a;
+    --text-subtle: #a1a1aa;
+
+    --accent: #6d28d9;
+    --accent-hover: #5b21b6;
+    --accent-soft: #f3eeff;
+
+    --success: #16a34a;
+    --success-hover: #15803d;
+    --danger: #e11d48;
+    --danger-hover: #be123c;
+
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+
+    --shadow-sm: 0 1px 2px rgba(15, 15, 20, 0.05);
+    --shadow-md: 0 6px 16px rgba(15, 15, 20, 0.08);
+
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, fieldset, legend {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+button {
+    font-family: inherit;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-subtle);
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.main-color {
+    color: var(--accent);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-subtle);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+}
+
+/* Shared control-panel primitives (used by pages with start/stop/save controls) */
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.control-button {
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.control-button:hover {
+    filter: brightness(0.95);
+}
+
+.control-button:active {
+    transform: scale(0.97);
+}
+
+.start-button {
+    background-color: var(--success);
+}
+
+.start-button:hover {
+    background-color: var(--success-hover);
+}
+
+.stop-button {
+    background-color: var(--danger);
+}
+
+.stop-button:hover {
+    background-color: var(--danger-hover);
+}
+
+.save-button {
+    background-color: var(--accent);
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 4px;
+}
+
+.save-button:hover {
+    background-color: var(--accent-hover);
+}
+
+.config-container {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.config-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+.config-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.config-item.wide {
+    grid-column: span 2;
+}
+
+.config-item label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.config-item input {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.config-item input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.strategy-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+
+.strategy-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.strategy-item label {
+    font-size: 11px;
+    color: var(--text-muted);
+}
